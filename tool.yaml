@@ -44,8 +44,6 @@ technik:
   quellcode: https://github.com/andremichelle/openDAW
   lizenz: AGPL-3.0
   lizenz_link: https://github.com/andremichelle/openDAW/blob/main/LICENSE
-  hinweis: 'Eigene Auslieferung: Die Klangbibliothek des Anbieters (gekaufte Paketware) kommt nicht mit. Mitgeliefert werden 51 freie Klänge (CC0). Live-Räume, Demo-Stücke, Plugin-Katalog, Klangtrennung und Speichern in fremden Cloud-Diensten sind abgeschaltet.'
-  sprache: 'Oberfläche englisch (Original); Anleitung, Didaktik und Unterrichtsentwurf auf Deutsch'
 
 doku:
   anleitung: docs/anleitung.md

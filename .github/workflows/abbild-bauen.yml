@@ -14,6 +14,14 @@ name: Abbild bauen
 on:
   push:
     branches: [main]
+    # Änderungen an Texten und Metadaten ändern das Abbild nicht — dann soll
+    # auch nicht minutenlang neu gebaut werden. Den Quelltext-Abzug (FASSUNG im
+    # Dockerfile) betrifft das nicht.
+    paths-ignore:
+      - tool.yaml
+      - README.md
+      - NOTICE
+      - docs/**
   workflow_dispatch:
 
 jobs:
