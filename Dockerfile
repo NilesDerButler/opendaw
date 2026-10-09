@@ -88,4 +88,7 @@ RUN npm run build \
 FROM ${BASIS_NGINX}
 COPY --from=bau /quelle/packages/app/studio/dist/ /usr/share/nginx/html/
 COPY config/default.conf /etc/nginx/conf.d/default.conf
+# Selbstkontrolle: eine fehlerhafte Konfiguration soll den Bau scheitern lassen
+# und nicht erst im Betrieb zu einem Neustart-Kreis führen.
+RUN nginx -t
 EXPOSE 80
