@@ -13,7 +13,13 @@
 #
 # Zur Laufzeit ruft das Werkzeug keine fremde Adresse auf.
 
-FROM node:24-bookworm AS bau
+# Die Grundabbilder sind austauschbar: Docker Hub drosselt anonyme Abrufe von
+# geteilten Bauservern (HTTP 429). Der Bauablauf versucht es erst amtlich und
+# bei Fehlschlag über den öffentlichen Spiegel (siehe .github/workflows).
+ARG BASIS_NODE=node:24-bookworm
+ARG BASIS_NGINX=nginx:alpine-slim
+
+FROM ${BASIS_NODE} AS bau
 
 # Festgeschriebener Stand: 3ae072ef269f35d5bac868dbaf9bb4f68909c66d (2026-10-09).
 ARG QUELLE=https://github.com/andremichelle/openDAW/archive/3ae072ef269f35d5bac868dbaf9bb4f68909c66d.tar.gz
@@ -79,7 +85,7 @@ RUN npm run build \
  && echo "--- Buendelgroesse:" && du -sh packages/app/studio/dist \
  && echo "--- Bibliothek:" && ls packages/app/studio/dist/library | wc -l
 
-FROM nginx:alpine-slim
+FROM ${BASIS_NGINX}
 COPY --from=bau /quelle/packages/app/studio/dist/ /usr/share/nginx/html/
 COPY config/default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80

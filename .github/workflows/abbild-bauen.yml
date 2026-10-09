@@ -5,8 +5,11 @@ name: Abbild bauen
 # gebaut. Der Quelltext kommt festgeschrieben aus dem amtlichen Archiv; der Bau
 # bricht ab, wenn die Ankerprüfung in scripts/anpassen.py nicht mehr passt.
 #
-# Der Bau dauert lange (Rust-Klangmaschine im Container). Zeitgrenze deshalb
-# grosszügig.
+# Der Bau dauert lange (Rust-Klangmaschine im Container); die Zeitgrenze ist
+# deshalb grosszuegig. Ausserdem drosselt Docker Hub anonyme Abrufe von
+# geteilten Bauservern (HTTP 429) schon beim Aufloesen der Grundabbilder —
+# deshalb wird bei Fehlschlag ein zweites Mal ueber den oeffentlichen Spiegel
+# mirror.gcr.io gebaut (siehe Schritt unten).
 
 on:
   push:
@@ -35,14 +38,21 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Abbild bauen und schieben
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          platforms: linux/amd64
-          tags: |
-            ghcr.io/mekotools/opendaw:latest
-            ghcr.io/mekotools/opendaw:${{ github.sha }}
+        run: |
+          set -u
+          echo "== Versuch 1: amtliche Grundabbilder"
+          if docker buildx build --push --platform linux/amd64 \
+               --tag "ghcr.io/mekotools/opendaw:latest" \
+               --tag "ghcr.io/mekotools/opendaw:${GITHUB_SHA}" .; then
+            echo "Versuch 1 erfolgreich"; exit 0
+          fi
+          echo "== Versuch 1 fehlgeschlagen (haeufigste Ursache: Docker-Hub-Drosselung 429)"
+          echo "== Versuch 2: ueber den oeffentlichen Spiegel mirror.gcr.io"
+          docker buildx build --push --platform linux/amd64 \
+            --build-arg BASIS_NODE=mirror.gcr.io/library/node:24-bookworm \
+            --build-arg BASIS_NGINX=mirror.gcr.io/library/nginx:alpine-slim \
+            --tag "ghcr.io/mekotools/opendaw:latest" \
+            --tag "ghcr.io/mekotools/opendaw:${GITHUB_SHA}" .
 
       - name: Kennwerte melden
         run: |
