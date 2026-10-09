@@ -1,0 +1,10 @@
+# Beim Bau wird nichts ausgeschlossen, was gebraucht wird: der Quelltext kommt
+# aus dem amtlichen Archiv. Ausgeschlossen wird nur, was hier liegt und nicht
+# ins Abbild gehört.
+.git
+.github
+docs
+README.md
+NOTICE
+tool.yaml
+*.tmp

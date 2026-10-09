@@ -1,0 +1,59 @@
+# Herkunft und Lizenzen (NOTICE)
+
+Dieses Abbild enthält Werke Dritter. Aufgeführt sind Urheber, Quelle und Lizenz.
+
+## 1. openDAW (Programm)
+
+- Quelle: https://github.com/andremichelle/openDAW
+- Fassung: 3ae072ef269f35d5bac868dbaf9bb4f68909c66d (2026-10-09)
+- Lizenz: GNU Affero General Public License v3.0 (AGPL-3.0), siehe LICENSE im
+  Quelltext des Originals.
+- Änderungen dieser Fassung: siehe scripts/anpassen.py und README.md. Der
+  geänderte Quelltext wird mit dem Abbild herausgegeben (Ankerprüfung im Bau).
+- Enthaltene Klangkassetten des Instruments "Tubular" (aus dem Original):
+  - "Tubular Classics" — openDAW, CC0
+  - "Dexed 01" und "SynprezFM 01..32" — DX7-Programme von Jean-Marc Desprez
+    (SynprezFM), GPL-3.0 (mit Dexed ausgeliefert)
+  - "YM2612 ROM1..4" — Nick Culbertson, MIT
+
+## 2. Klangbibliothek (51 Aufnahmen)
+
+Alle Klänge sind unter CC0-1.0 (gemeinfrei) veröffentlicht; die Namensnennung
+ist freiwillig und erfolgt hier trotzdem. Herkunft: freesound.org.
+Die Dateien wurden auf 48 kHz, 16 Bit, mono umgerechnet und auf -1 dBFS
+normiert; die Zuordnung steht in klaenge/manifest.json.
+
+- **akmp** — 1 Klang/Klänge: Bass 4 (https://freesound.org/s/332430/)
+- **BaDoink** — 1 Klang/Klänge: Percussion 1 (https://freesound.org/s/563387/)
+- **Brandao38** — 1 Klang/Klänge: HiHat 3 (https://freesound.org/s/504929/)
+- **CAT-FOX_ALEX** — 2 Klang/Klänge: Effekt 1 (https://freesound.org/s/863769/), Effekt 3 (https://freesound.org/s/863756/)
+- **deadrobotmusic** — 1 Klang/Klänge: Tom 2 (https://freesound.org/s/572895/)
+- **Dolfeus** — 1 Klang/Klänge: Snare 4 (https://freesound.org/s/55232/)
+- **Godowan** — 1 Klang/Klänge: Percussion 4 (https://freesound.org/s/240477/)
+- **halo4shaun** — 1 Klang/Klänge: Effekt 2 (https://freesound.org/s/761190/)
+- **harrisonlace** — 1 Klang/Klänge: Percussion 2 (https://freesound.org/s/611503/)
+- **it_was_the_sun** — 2 Klang/Klänge: Snare 6 (https://freesound.org/s/209513/), Percussion 3 (https://freesound.org/s/209514/)
+- **johnnydekk** — 2 Klang/Klänge: Tom 3 (https://freesound.org/s/581462/), Becken 1 (https://freesound.org/s/581472/)
+- **Mattc90** — 4 Klang/Klänge: Kick 3 (https://freesound.org/s/400707/), Bass 1 (https://freesound.org/s/347625/), Bass 2 (https://freesound.org/s/351916/), Bass 3 (https://freesound.org/s/351917/)
+- **pomeroyjoshua** — 5 Klang/Klänge: HiHat 2 (https://freesound.org/s/513362/), HiHat 4 (https://freesound.org/s/513361/), HiHat offen 2 (https://freesound.org/s/513383/), HiHat offen 3 (https://freesound.org/s/513396/), HiHat offen 4 (https://freesound.org/s/513384/)
+- **Rob10** — 3 Klang/Klänge: Kick 4 (https://freesound.org/s/132584/), Kick 5 (https://freesound.org/s/132582/), Kick 6 (https://freesound.org/s/132583/)
+- **Sadiquecat** — 2 Klang/Klänge: Percussion 5 (https://freesound.org/s/742279/), Shaker 1 (https://freesound.org/s/792505/)
+- **sgossner** — 7 Klang/Klänge: Rimshot 1 (https://freesound.org/s/375396/), Rimshot 2 (https://freesound.org/s/375359/), Shaker 2 (https://freesound.org/s/375639/), Klavier 1 (https://freesound.org/s/374344/), Klavier 2 (https://freesound.org/s/374342/), Klavier 3 (https://freesound.org/s/374343/), Klavier 4 (https://freesound.org/s/374298/)
+- **soneproject** — 5 Klang/Klänge: Tom 1 (https://freesound.org/s/422343/), Becken 2 (https://freesound.org/s/260466/), Becken 3 (https://freesound.org/s/260460/), Ride 1 (https://freesound.org/s/260454/), Ride 2 (https://freesound.org/s/260456/)
+- **Sound_Bar_KK** — 2 Klang/Klänge: Kick 1 (https://freesound.org/s/424662/), HiHat 1 (https://freesound.org/s/685866/)
+- **tboneaudio** — 1 Klang/Klänge: HiHat offen 1 (https://freesound.org/s/816813/)
+- **totalcult** — 3 Klang/Klänge: Clap 1 (https://freesound.org/s/388543/), Clap 2 (https://freesound.org/s/388546/), Clap 3 (https://freesound.org/s/388544/)
+- **Tristan** — 4 Klang/Klänge: Snare 1 (https://freesound.org/s/16792/), Snare 2 (https://freesound.org/s/16789/), Snare 3 (https://freesound.org/s/16790/), Snare 5 (https://freesound.org/s/16791/)
+- **YellowTree** — 1 Klang/Klänge: Kick 2 (https://freesound.org/s/422679/)
+
+## 3. FFmpeg-Kern
+
+- Datei: ffmpeg-core.js, ffmpeg-core.wasm (im Abbild unter /ffmpeg)
+- Quelle: @ffmpeg/core 0.12.6, https://www.npmjs.com/package/@ffmpeg/core
+- Lizenz: MIT
+- Prüfsummen im Dockerfile hinterlegt.
+
+## 4. Weitere Bestandteile
+
+Die übrigen Bibliotheken stammen aus dem Quelltext des Originals (package-lock.json)
+und behalten ihre jeweiligen Lizenzen.
