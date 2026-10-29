@@ -1,0 +1,11 @@
+services:
+  opendaw:
+    build: .
+    container_name: opendaw
+    restart: unless-stopped
+    networks:
+      - opendaw
+
+networks:
+  opendaw:
+    external: true
